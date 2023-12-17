@@ -39,7 +39,7 @@ const Product = ({ user }) => {
   return (
     <div>
       <div className="product">
-        <div className="product-add mt-3">
+        <div className="product-add m-3">
           <h1>Product List</h1>
           <div className="button-container">
             <Link to="/add" className="btn btn-primary ">

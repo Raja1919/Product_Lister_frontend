@@ -1,51 +1,35 @@
+/* Product.css */
+
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .card {
-    width: 18rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  
-  .card-body {
-    padding: 15px;
-  }
-  
-  .card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .card-text {
-    margin-bottom: 8px;
-  }
-  
-  .btn-group {
-    display: flex;
-    gap: 40%;
-    margin-top: 15px;
-  }
-  
-  .btn {
-    cursor: pointer;
-  }
-  
-  .button-container {
-    margin-top: 20px;
-    padding: 10px;
-  }
-  
-  .product-add h1 {
-    margin-bottom: 20px;
-  }
-  
-  .clear-button-container {
-    margin-top: 20px;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  width: 18rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  margin-bottom: 8px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 40%;
+  margin-top: 15px
+}

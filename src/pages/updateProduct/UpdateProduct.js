@@ -29,7 +29,7 @@ const UpdateProduct = () => {
     event.preventDefault();
 
     axios
-      .put(`http://localhost:5000/product/${params.id}`, fields)
+      .put(`http://localhost:9000/api/product/${params.id}`, fields)
       .then(() => {
         navigate("/");
       })
@@ -51,7 +51,7 @@ const UpdateProduct = () => {
   };
 
   return (
-    <>
+    <div className="updateProduct">
       <form onSubmit={updateHandler}>
         <h1>Update Product Details</h1>
         <div className="product-list-container">
@@ -123,7 +123,7 @@ const UpdateProduct = () => {
           </button>
         </div>
       </form>
-    </>
+    </div>
   );
 };
 

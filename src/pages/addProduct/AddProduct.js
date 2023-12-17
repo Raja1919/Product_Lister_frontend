@@ -39,9 +39,9 @@ const AddProduct = ({ user }) => {
   };
 
   return (
-    <>
+    <div className="addProduct">
       <form onSubmit={submitHandler}>
-        <h1>Add Products</h1>
+        <h1 className="mt-3">Add Products</h1>
         <div className="button-container">
           <Link to="/" className="button">
             Product List
@@ -102,16 +102,16 @@ const AddProduct = ({ user }) => {
             />
           </div>
 
-          <button type="submit" id="add-product">
+          <button type="submit" className="add-product">
             Add
           </button>
           <br />
-          <button id="reset" onClick={resetHandler}>
+          <button className="reset" onClick={resetHandler}>
             Reset
           </button>
         </div>
       </form>
-    </>
+    </div>
   );
 };
 
