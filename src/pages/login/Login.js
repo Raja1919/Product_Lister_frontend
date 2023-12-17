@@ -28,7 +28,7 @@ const Login = ({ setLoggedIn }) => {
           resetHandler();
           localStorage.setItem("user", JSON.stringify(result.data.user));
           setLoggedIn(true);
-          navigate("/");
+          navigate("/product");
         } else {
           // Handle incorrect login details
           alert("Wrong Details. Fill correct details.");
@@ -74,10 +74,10 @@ const Login = ({ setLoggedIn }) => {
             />
           </div>
 
-          <button type="submit" id="login">
+          <button type="submit" className="login-btn">
             Log in
           </button>
-          <button id="reset" onClick={resetHandler}>
+          <button className="reset-btn" onClick={resetHandler}>
             Reset
           </button>
           <br />

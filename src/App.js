@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Nav from "./components/navbar/Navbar";
 import AddProduct from "./pages/addProduct/AddProduct.js";
 import Product from "./pages/product/Product";
 import UpdateProduct from "./pages/updateProduct/UpdateProduct";
@@ -35,7 +34,8 @@ const App = () => {
       <BrowserRouter>
         {loggedIn && <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />}
         <Routes>
-          <Route path="/" element={<Product user={user} />} />
+          <Route path="/" element={<Login setLoggedIn={setLoggedIn} />} />
+          <Route path="/product" element={<Product user={user} />} />
           <Route path="/add" element={<AddProduct user={user} />} />
           <Route path="/update/:id" element={<UpdateProduct user={user} />} />
           <Route path="/profile" element={<Profile user={user} />} />
@@ -43,13 +43,11 @@ const App = () => {
             path="/signup"
             element={<SignUp setLoggedIn={setLoggedIn} />}
           />
-          <Route path="/login" element={<Login setLoggedIn={setLoggedIn} />} />
         </Routes>
         <Footer />
       </BrowserRouter>
       {!loggedIn && (
         <BrowserRouter>
-        <Navbar/>
           <Login setLoggedIn={setLoggedIn} />
         </BrowserRouter>
       )}

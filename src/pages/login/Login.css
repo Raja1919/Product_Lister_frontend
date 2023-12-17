@@ -20,7 +20,7 @@
   margin-bottom: 15px;
 }
 
-.form-field span {
+.form-field label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
@@ -32,7 +32,8 @@
   box-sizing: border-box;
 }
 
-#login {
+.login-btn,
+.reset-btn {
   background-color: #4caf50;
   color: #fff;
   padding: 10px;
@@ -41,20 +42,15 @@
   cursor: pointer;
 }
 
-#login:hover {
+.login-btn:hover {
   background-color: #45a049;
 }
 
-#reset {
+.reset-btn {
   background-color: #f44336;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
-#reset:hover {
+.reset-btn:hover {
   background-color: #d32f2f;
 }
 
