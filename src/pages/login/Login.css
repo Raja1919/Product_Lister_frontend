@@ -34,12 +34,16 @@
 
 .login-btn,
 .reset-btn {
+  width: 150px;
   background-color: #4caf50;
   color: #fff;
   padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin: auto; /* Center the buttons */
+  margin-top: 10px;
+  display: block;
 }
 
 .login-btn:hover {

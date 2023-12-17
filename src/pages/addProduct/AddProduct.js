@@ -19,12 +19,10 @@ const AddProduct = ({ user }) => {
     event.preventDefault();
 
     axios
-      .post("http://localhost:9000/api/add-product", fields, {
-        headers: { "Content-Type": "application/json" },
-      })
+      .post("http://localhost:9000/api/add-product", fields)
       .then(() => {
         resetHandler();
-        navigate("/");
+        navigate("/product");
       })
       .catch((error) => {
         console.error(error);
@@ -43,7 +41,7 @@ const AddProduct = ({ user }) => {
       <form onSubmit={submitHandler}>
         <h1 className="mt-3">Add Products</h1>
         <div className="button-container">
-          <Link to="/" className="button">
+          <Link to="/product" className="button">
             Product List
           </Link>
         </div>

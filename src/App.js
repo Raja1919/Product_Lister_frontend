@@ -46,11 +46,6 @@ const App = () => {
         </Routes>
         <Footer />
       </BrowserRouter>
-      {!loggedIn && (
-        <BrowserRouter>
-          <Login setLoggedIn={setLoggedIn} />
-        </BrowserRouter>
-      )}
     </div>
   );
 };

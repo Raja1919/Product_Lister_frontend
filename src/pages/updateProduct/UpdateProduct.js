@@ -31,7 +31,7 @@ const UpdateProduct = () => {
     axios
       .put(`http://localhost:9000/api/product/${params.id}`, fields)
       .then(() => {
-        navigate("/");
+        navigate("/product");
       })
 
       .catch((error) => {

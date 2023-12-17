@@ -50,16 +50,25 @@ const Product = ({ user }) => {
       </div>
 
       {products.length > 0 ? (
-        <div>
-          <div className="card-container mt-3">
-            {products.map((product, index) => (
-              <div key={index} className="card">
-                <div className="card-body">
-                  <h5 className="card-title">{product.name}</h5>
-                  <p className="card-text">Price: {product.price}</p>
-                  <p className="card-text">Brand: {product.brand}</p>
-                  <p className="card-text">Category: {product.category}</p>
-                  <div className="btn-group">
+        <div className="table-container">
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Brand</th>
+                <th>Category</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {products.map((product) => (
+                <tr key={product._id}>
+                  <td>{product.name}</td>
+                  <td>{product.price}</td>
+                  <td>{product.brand}</td>
+                  <td>{product.category}</td>
+                  <td>
                     <button
                       onClick={() => deleteHandler(product._id)}
                       className="btn btn-danger"
@@ -71,11 +80,11 @@ const Product = ({ user }) => {
                         <button className="btn btn-warning">Update</button>
                       </Link>
                     )}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       ) : (
         <div>

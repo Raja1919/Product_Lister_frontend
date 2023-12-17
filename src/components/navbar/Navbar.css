@@ -1,53 +1,55 @@
 nav {
-    background-color: royalblue;
-    padding: 8px;
-  }
-  
-  ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-  }
-  
-  ul li {
-    margin-right: 10px;
-  }
-  
-  ul li:last-child {
-    margin-right: auto;
-  }
-  
-  ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 8px 20px;
-    display: block;
-  }
-  
-  ul li:hover {
-    background-color: rgb(34, 135, 168);
-  }
-  
-  ul li:hover a {
-    color: #fff;
-  }
-  
-  .active {
-    background-color: rgb(28, 166, 3);
-  }
-  
-  /* Optional: Style for right-aligned links */
-  .right-links {
-    margin-left: auto;
-  }
-  
-  .right-links li {
-    margin-left: 10px;
-  }
-  
-  /* Optional: Style for active link in right-links */
-  .right-links .active {
-    background-color: rgb(28, 166, 3);
-  }
-  
+  background-color: royalblue;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+ul li {
+  margin-right: 10px;
+}
+
+ul li:last-child {
+  margin-right: 0;
+}
+
+ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 20px;
+  display: block;
+}
+
+ul li:hover {
+  background-color: rgb(34, 135, 168);
+}
+
+ul li:hover a {
+  color: #fff;
+}
+
+.active {
+  background-color: rgb(28, 166, 3);
+}
+
+/* Optional: Style for right-aligned links */
+.right-links {
+  display: flex;
+  align-items: center;
+}
+
+.right-links li {
+  margin-left: 10px;
+}
+
+/* Optional: Style for active link in right-links */
+.right-links .active {
+  background-color: rgb(28, 166, 3);
+}
