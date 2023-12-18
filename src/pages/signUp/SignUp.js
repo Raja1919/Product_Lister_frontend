@@ -86,10 +86,10 @@ const SignUp = ({ setLoggedIn, signed }) => {
             />
           </div>
 
-          <button type="submit" id="signUp">
+          <button type="submit" className="signUp">
             Sign Up
           </button>
-          <button id="reset" onClick={resetHandler}>
+          <button className="reset" onClick={resetHandler}>
             Reset
           </button>
           <br />

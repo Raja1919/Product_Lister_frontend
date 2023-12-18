@@ -5,7 +5,7 @@ import axios from "axios"; // Make sure to import axios
 
 import "./AddProduct.css";
 
-const AddProduct = ({ user }) => {
+const AddProduct = () => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [brand, setBrand] = useState("");
@@ -100,7 +100,7 @@ const AddProduct = ({ user }) => {
             />
           </div>
 
-          <button type="submit" className="add-product">
+          <button type="submit" className="add">
             Add
           </button>
           <br />

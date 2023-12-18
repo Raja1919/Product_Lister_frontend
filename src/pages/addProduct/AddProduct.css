@@ -1,60 +1,87 @@
 /* AddProduct.css */
 
 .addProduct {
-  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
+  height: 70vh;
+}
+
+.add-product-form {
+  width: 400px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.addProduct .button-container {
- text-align: left;
- padding: 10px;
-}
-
-.addProduct .button {
-  text-decoration: none;
-  padding: 10px 15px;
-  background-color: #3498db;
-  color: #fff;
-  border-radius: 3px;
-  margin-right: 10px;
-}
-
-.add-product-form {
-  margin-top: 20px;
-}
-
-.addProduct .form-field {
+.form-field {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 15px;
 }
 
-.addProduct .input-field {
+.form-field span {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-field {
   width: 100%;
   padding: 8px;
   box-sizing: border-box;
 }
 
-.add_Product button {
-  padding: 10px 15px;
-  background-color: #27ae60;
+.add {
+  width: 100%;
+  background-color: #0077c2;
   color: #fff;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
+  padding: 10px;
   cursor: pointer;
 }
 
+.add:hover {
+  background-color: #0098a3;
+}
+
 .reset {
-  background-color: #ce2714;
+  width: 100%;
+
+  background-color: #fa0606;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  cursor: pointer;
   margin-top: 10px;
 }
 
-.addProduct h1 {
-  text-align: center;
-  color: #333;
+.reset:hover {
+  background-color: #ee851c;
 }
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.button {
+  background-color: #0077c2;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.button:hover {
+  background-color: #0098a3;
+}
+
+.button-container .add, .button-container .reset {
+  margin: 10px;
+}
+

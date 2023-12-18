@@ -34,7 +34,7 @@
 
 .login-btn,
 .reset-btn {
-  width: 150px;
+  width: 100%;
   background-color: #4caf50;
   color: #fff;
   padding: 10px;
