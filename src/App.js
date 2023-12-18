@@ -34,15 +34,17 @@ const App = () => {
       <BrowserRouter>
         {loggedIn && <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />}
         <Routes>
-          <Route path="/" element={<Login setLoggedIn={setLoggedIn} />} />
-          <Route path="/product" element={<Product user={user} />} />
-          <Route path="/add" element={<AddProduct user={user} />} />
-          <Route path="/update/:id" element={<UpdateProduct user={user} />} />
-          <Route path="/profile" element={<Profile user={user} />} />
-          <Route
-            path="/signup"
-            element={<SignUp setLoggedIn={setLoggedIn} />}
-          />
+          {loggedIn ? (
+            <>
+              <Route path="/product" element={<Product user={user} />} />
+              <Route path="/add" element={<AddProduct user={user} />} />
+              <Route path="/update/:id" element={<UpdateProduct user={user} />} />
+              <Route path="/profile" element={<Profile user={user} />} />
+            </>
+          ) : (
+            <Route path="/" element={<Login setLoggedIn={setLoggedIn} />} />
+          )}
+          <Route path="/signup" element={<SignUp setLoggedIn={setLoggedIn} />} />
         </Routes>
         <Footer />
       </BrowserRouter>
