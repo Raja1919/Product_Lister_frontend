@@ -14,20 +14,6 @@ const EditProfile = ({ user }) => {
   const [email, setEmail] = useState(user.email || "");
   const [password, setPassword] = useState("");
 
-  // Function to get user details
-  const getUserDetails = () => {
-    axios
-      .get(`https://product-lister-backend.onrender.com/api/user-details/${userID}`)
-      .then((result) => {
-        setName(result.data.name);
-        setEmail(result.data.email);
-        // Note: Avoid storing and displaying passwords in the frontend
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
-
   // Function to handle saving changes
   const handleSaveChanges = async (event) => {
     event.preventDefault();
@@ -59,8 +45,21 @@ const EditProfile = ({ user }) => {
 
   // Effect hook to get user details on component mount
   useEffect(() => {
+    const getUserDetails = () => {
+      axios
+        .get(`https://product-lister-backend.onrender.com/api/user-details/${userID}`)
+        .then((result) => {
+          setName(result.data.name);
+          setEmail(result.data.email);
+          // Note: Avoid storing and displaying passwords in the frontend
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    };
+
     getUserDetails();
-  }, []);
+  }, [userID]); // Include userID in the dependency array
 
   // Render the form
   return (

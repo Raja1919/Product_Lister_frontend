@@ -14,17 +14,6 @@ const UpdateProduct = () => {
 
   const fields = { name, price, brand, category };
 
-  const getProductDetails = () => {
-    axios
-      .get(`https://product-lister-backend.onrender.com/api/product/${params.id}`)
-      .then((result) => {
-        setName(result.data.name);
-        setPrice(result.data.price);
-        setBrand(result.data.brand);
-        setCategory(result.data.category);
-      });
-  };
-
   const updateHandler = (event) => {
     event.preventDefault();
 
@@ -33,15 +22,25 @@ const UpdateProduct = () => {
       .then(() => {
         navigate("/product");
       })
-
       .catch((error) => {
         console.error(error);
       });
   };
 
   useEffect(() => {
+    const getProductDetails = () => {
+      axios
+        .get(`https://product-lister-backend.onrender.com/api/product/${params.id}`)
+        .then((result) => {
+          setName(result.data.name);
+          setPrice(result.data.price);
+          setBrand(result.data.brand);
+          setCategory(result.data.category);
+        });
+    };
+
     getProductDetails();
-  }, []);
+  }, [params.id]); // Include params.id in the dependency array
 
   const resetHandler = () => {
     setName("");
