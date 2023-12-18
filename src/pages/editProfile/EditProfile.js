@@ -30,7 +30,7 @@ const EditProfile = ({ user }) => {
       console.log(result.data);
 
       // After successfully saving changes, navigate to the profile page
-      navigate("/");
+      navigate("/profile");
     } catch (error) {
       console.error(error);
     }
