@@ -101,11 +101,10 @@ const AddProduct = () => {
             />
           </div>
 
-          <button type="submit" className="add">
+          <button type="submit" className="btn btn-primary add ">
             Add
           </button>
-          <br />
-          <button className="reset" onClick={resetHandler}>
+          <button className="btn btn-primary reset" onClick={resetHandler}>
             Reset
           </button>
         </div>
