@@ -103,7 +103,6 @@ const EditProfile = ({ user }) => {
             value={password}
             onChange={(event) => setPassword(event.target.value)}
             autoComplete="new-password"
-            required
           />
         </div>
 
