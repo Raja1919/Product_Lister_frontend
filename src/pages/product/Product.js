@@ -8,7 +8,7 @@ const Product = ({ user }) => {
 
   const getProducts = () => {
     axios
-      .get(`http://localhost:9000/api/products`)
+      .get(`https://product-lister-backend.onrender.com/api/products`)
       .then((result) => {
         if (result.data) {
           setProducts(result.data);
@@ -21,7 +21,7 @@ const Product = ({ user }) => {
 
   const deleteHandler = (id) => {
     axios
-      .delete(`http://localhost:9000/api/product/${id}`)
+      .delete(`https://product-lister-backend.onrender.com/api/product/${id}`)
       .then(() => {
         getProducts();
       })

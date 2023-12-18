@@ -17,7 +17,7 @@ const EditProfile = ({ user }) => {
   // Function to get user details
   const getUserDetails = () => {
     axios
-      .get(`http://localhost:9000/api/user-details/${userID}`)
+      .get(`https://product-lister-backend.onrender.com/api/user-details/${userID}`)
       .then((result) => {
         setName(result.data.name);
         setEmail(result.data.email);
@@ -37,7 +37,7 @@ const EditProfile = ({ user }) => {
 
     try {
       const result = await axios.put(
-        `http://localhost:9000/api/user-details/${userID}`,
+        `https://product-lister-backend.onrender.com/api/user-details/${userID}`,
         updatedFields
       );
 

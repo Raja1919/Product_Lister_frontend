@@ -20,7 +20,7 @@ const Login = ({ setLoggedIn }) => {
     event.preventDefault();
 
     axios
-      .post(`http://localhost:9000/api/login`, fields)
+      .post(`https://product-lister-backend.onrender.com/api/login`, fields)
       .then((result) => {
         console.log(result.data);
 

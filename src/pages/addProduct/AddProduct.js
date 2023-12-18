@@ -19,7 +19,7 @@ const AddProduct = ({ user }) => {
     event.preventDefault();
 
     axios
-      .post("http://localhost:9000/api/add-product", fields)
+      .post("https://product-lister-backend.onrender.com/api/add-product", fields)
       .then(() => {
         resetHandler();
         navigate("/product");

@@ -16,7 +16,7 @@ const UpdateProduct = () => {
 
   const getProductDetails = () => {
     axios
-      .get(`http://localhost:9000/api/product/${params.id}`)
+      .get(`https://product-lister-backend.onrender.com/api/product/${params.id}`)
       .then((result) => {
         setName(result.data.name);
         setPrice(result.data.price);
@@ -29,7 +29,7 @@ const UpdateProduct = () => {
     event.preventDefault();
 
     axios
-      .put(`http://localhost:9000/api/product/${params.id}`, fields)
+      .put(`https://product-lister-backend.onrender.com/api/product/${params.id}`, fields)
       .then(() => {
         navigate("/product");
       })

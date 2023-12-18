@@ -19,7 +19,7 @@ const SignUp = ({ setLoggedIn, signed }) => {
     event.preventDefault();
 
     try {
-      const result = await axios.post("http://localhost:9000/api/signup", {
+      const result = await axios.post("https://product-lister-backend.onrender.com/api/signup", {
         name,
         email,
         password,
