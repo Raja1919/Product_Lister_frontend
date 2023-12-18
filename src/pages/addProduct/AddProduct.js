@@ -1,8 +1,6 @@
-// import axios from 'axios';
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios"; // Make sure to import axios
-
+import axios from "axios";
 import "./AddProduct.css";
 
 const AddProduct = () => {
@@ -19,7 +17,10 @@ const AddProduct = () => {
     event.preventDefault();
 
     axios
-      .post("https://product-lister-backend.onrender.com/api/add-product", fields)
+      .post(
+        "https://product-lister-backend.onrender.com/api/add-product",
+        fields
+      )
       .then(() => {
         resetHandler();
         navigate("/product");

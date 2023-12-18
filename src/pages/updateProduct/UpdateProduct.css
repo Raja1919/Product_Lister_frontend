@@ -1,67 +1,64 @@
-/* UpdateProduct.css */
-
 .updateProduct {
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .updateProduct .product-list-container {
-    text-align: left;
-    padding: 10px;
-    margin-top: 20px;
-  }
-  
-  .updateProduct .product-list {
-    text-decoration: none;
-    padding: 10px 15px;
-    background-color: #3498db;
-    color: #fff;
-    border-radius: 3px;
-    margin-right: 10px;
-  }
-  
-  .update-product-form {
-    margin-top: 20px;
-  }
-  
-  .updateProduct .form-field {
-    margin-bottom: 15px;
-  }
-  
-  .updateProduct .input-field {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-  }
-  
-  button#update-product {
-    padding: 10px 15px;
-    background-color: #27ae60;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  button#reset {
-    background-color: #e74c3c;
-    margin-top: 10px;
-    padding: 10px 15px;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  h1 {
-    text-align: center;
-    color: #333;
-  }
-  
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.updateProduct .product-list-container {
+  text-align: left;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.updateProduct .product-list {
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.update-product-form {
+  margin-top: 20px;
+}
+
+.updateProduct .form-field {
+  margin-bottom: 15px;
+}
+
+.updateProduct .input-field {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button#update-product {
+  padding: 10px 15px;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button#reset {
+  background-color: #e74c3c;
+  margin-top: 10px;
+  padding: 10px 15px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}

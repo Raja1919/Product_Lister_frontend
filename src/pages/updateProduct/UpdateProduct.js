@@ -40,7 +40,7 @@ const UpdateProduct = () => {
     };
 
     getProductDetails();
-  }, [params.id]); // Include params.id in the dependency array
+  }, [params.id]); 
 
   const resetHandler = () => {
     setName("");

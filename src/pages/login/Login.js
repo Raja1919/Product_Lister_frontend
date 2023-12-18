@@ -30,13 +30,11 @@ const Login = ({ setLoggedIn }) => {
           setLoggedIn(true);
           navigate("/product");
         } else {
-          // Handle incorrect login details
           alert("Wrong Details. Fill correct details.");
         }
       })
       .catch((error) => {
         console.error(error);
-        // Handle network or server errors
         alert("An error occurred. Please try again later.");
       });
   };

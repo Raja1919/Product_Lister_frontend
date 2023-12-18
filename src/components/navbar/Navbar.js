@@ -4,10 +4,8 @@ import "./Navbar.css";
 
 const Navbar = ({ loggedIn, setLoggedIn }) => {
   const handleLogout = () => {
-    // Clear user information from local storage
     localStorage.removeItem("user");
 
-    // Update state to reflect the user being logged out
     setLoggedIn(false);
   };
 

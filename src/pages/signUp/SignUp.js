@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./SignUp.css";
 
-const SignUp = ({ setLoggedIn, signed }) => {
+const SignUp = ({ signed }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,11 +19,14 @@ const SignUp = ({ setLoggedIn, signed }) => {
     event.preventDefault();
 
     try {
-      const result = await axios.post("https://product-lister-backend.onrender.com/api/signup", {
-        name,
-        email,
-        password,
-      });
+      const result = await axios.post(
+        "https://product-lister-backend.onrender.com/api/signup",
+        {
+          name,
+          email,
+          password,
+        }
+      );
 
       resetHandler();
       localStorage.setItem("user", JSON.stringify(result.data));

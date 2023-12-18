@@ -39,7 +39,6 @@ ul li:hover a {
   background-color: rgb(28, 166, 3);
 }
 
-/* Optional: Style for right-aligned links */
 .right-links {
   display: flex;
   align-items: center;
@@ -49,7 +48,6 @@ ul li:hover a {
   margin-left: 10px;
 }
 
-/* Optional: Style for active link in right-links */
 .right-links .active {
   background-color: rgb(28, 166, 3);
 }

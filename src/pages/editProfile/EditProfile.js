@@ -1,24 +1,19 @@
-// Import necessary libraries and components
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./EditProfile.css";
 
-// EditProfile component
 const EditProfile = ({ user }) => {
-  // Extract user ID and set up navigation
   const userID = user._id;
   const navigate = useNavigate();
 
-  // Initialize state with user data
   const [name, setName] = useState(user.name || "");
   const [email, setEmail] = useState(user.email || "");
   const [password, setPassword] = useState("");
 
-  // Function to handle saving changes
   const handleSaveChanges = async (event) => {
     event.preventDefault();
 
-    // Ensure that the fields object is updated with the latest values
     const updatedFields = { name, email, password };
 
     try {
@@ -29,29 +24,27 @@ const EditProfile = ({ user }) => {
 
       console.log(result.data);
 
-      // After successfully saving changes, navigate to the profile page
       navigate("/product");
     } catch (error) {
       console.error(error);
     }
   };
 
-  // Function to handle resetting form fields
   const resetHandler = () => {
     setName(user.name || "");
     setEmail(user.email || "");
     setPassword("");
   };
 
-  // Effect hook to get user details on component mount
   useEffect(() => {
     const getUserDetails = () => {
       axios
-        .get(`https://product-lister-backend.onrender.com/api/user-details/${userID}`)
+        .get(
+          `https://product-lister-backend.onrender.com/api/user-details/${userID}`
+        )
         .then((result) => {
           setName(result.data.name);
           setEmail(result.data.email);
-          // Note: Avoid storing and displaying passwords in the frontend
         })
         .catch((error) => {
           console.error(error);
@@ -59,9 +52,8 @@ const EditProfile = ({ user }) => {
     };
 
     getUserDetails();
-  }, [userID]); // Include userID in the dependency array
+  }, [userID]);
 
-  // Render the form
   return (
     <form onSubmit={handleSaveChanges}>
       <div className="signup-form">
@@ -106,11 +98,11 @@ const EditProfile = ({ user }) => {
           />
         </div>
 
-        <button type="submit" id="saveChanges">
+        <button type="submit" className="saveChanges">
           Save Changes
         </button>
         <br />
-        <button type="button" id="reset" onClick={resetHandler}>
+        <button type="button" className="reset" onClick={resetHandler}>
           Reset
         </button>
       </div>
@@ -118,5 +110,4 @@ const EditProfile = ({ user }) => {
   );
 };
 
-// Export the EditProfile component
 export default EditProfile;
