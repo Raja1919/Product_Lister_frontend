@@ -93,7 +93,7 @@ const SignUp = ({ setLoggedIn, signed }) => {
             Reset
           </button>
           <br />
-          <Link to="/login">Already have an account? Login Now</Link>
+          <Link to="/">Already have an account? Login Now</Link>
         </div>
       </form>
     </div>
