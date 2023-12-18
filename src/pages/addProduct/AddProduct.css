@@ -1,6 +1,7 @@
 .addProduct {
   max-width: 300px;
   margin: 0 auto;
+  height: 80vh;
 }
 
 .button {
