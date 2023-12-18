@@ -27,7 +27,7 @@ const SignUp = ({ setLoggedIn, signed }) => {
 
       resetHandler();
       localStorage.setItem("user", JSON.stringify(result.data));
-      navigate("/login");
+      navigate("/");
     } catch (error) {
       console.error(error);
     }
